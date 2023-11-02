@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url('/fonts/Futura-Bold.ttf') format('truetype'); /* Renamed the font filename to be more consistent */
+  font-weight: 700; /* Using number value for bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura-Heavy';
+  src: url('/fonts/Futura-Heavy.ttf') format('truetype'); /* Renamed the font filename to be more consistent */
+  font-weight: 800; /* Assuming 'Heavy' to be heavier than 'Bold'. Adjust as necessary */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url('/fonts/Futura-Medium-Condensed.ttf') format('truetype'); /* Renamed for consistency */
+  font-weight: 500; /* Assuming 'Medium' is a middle weight. Adjust if necessary */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Souvenir';
+  src: url('/fonts/Souvenir-Normal.ttf') format('truetype'); /* Renamed for consistency */
+  font-weight: normal; /* Adjust if this is not a normal weight */
+  font-style: normal;
+}

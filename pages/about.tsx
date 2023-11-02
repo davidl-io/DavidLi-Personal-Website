@@ -1,22 +1,39 @@
 import type { NextPage } from 'next';
-import Navbar from './components/navbar';
-import Section_1 from './components/about/section_1';
-import Section_2 from './components/about/section_2';
+import Hero from './components/about/hero';
+import Interest from './components/about/interest';
+import Timeline from './components/about/timeline';
+import Contact from './components/about/contact';
 
 const About: NextPage = () => {
   return (
-    <>
-      <Navbar />
-      <div className="grid grid-cols-1 gap-4 p-4 pr-64 max-w-full">
-        <div className="h-screen flex items-center justify-center overflow-y-scroll">
-          <Section_1 />
-        </div>
-        <div className="h-screen overflow-y-scroll">
-          <Section_2 />
-        </div>
-      </div>
-    </>
-  )
+    <div className="flex h-full">
+      
+      {/* Main Content */}
+      <main className="flex-1 flex flex-col overflow-auto p-4 bg-gray-50">
+        
+        {/* Hero Section */}
+        <section className="h-screen flex items-center justify-center">
+          <Hero />
+        </section>
+
+        {/* Interest Section */}
+        <section className="flex-grow flex items-center justify-center">
+          <Interest />
+        </section>
+
+        {/* Timeline Section */}
+        <section className="flex-grow flex items-center justify-center">
+          <Timeline />
+        </section>
+
+        {/* Contact Section */}
+        <section className="flex-grow flex items-center justify-center">
+          <Contact />
+        </section>
+
+      </main>
+    </div>
+  );
 }
 
 export default About;
