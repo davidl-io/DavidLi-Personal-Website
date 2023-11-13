@@ -4,13 +4,14 @@ import Interest from './components/about/interest';
 import Timeline from './components/about/timeline';
 import Contact from './components/about/contact';
 
+
 const About: NextPage = () => {
   return (
+    <> 
     <div className="flex h-full">
       
       {/* Main Content */}
-      <main className="flex-1 flex flex-col overflow-auto p-4 bg-gray-50">
-        
+      <main className="flex-1 flex flex-col overflow-auto p-4">
         {/* Hero Section */}
         <section className="h-screen flex items-center justify-center">
           <Hero />
@@ -33,6 +34,7 @@ const About: NextPage = () => {
 
       </main>
     </div>
+    </>
   );
 }
 

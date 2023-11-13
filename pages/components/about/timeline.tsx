@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import {Tooltip} from "@nextui-org/react";
 
 const TimelineItem = ({ 
   imageSrc, 
@@ -14,21 +13,12 @@ const TimelineItem = ({
 }) => (
   <div className="flex">
       {align === 'left' && 
-          <Tooltip 
-          showArrow
-          placement="left"
-          content={content}
-          classNames={{
-            base: "py-2 px-4 shadow-xl text-black bg-gradient-to-br from-white to-neutral-400",
-            arrow: "bg-neutral-400 dark:bg-white",
-          }}>
           <div className={`w-11/12 text-right`} style={{ marginLeft: '-300px' }}>
               <h1>{year}</h1>
               {imageSrc && <Image src={imageSrc} alt={altText} width={260} height={200}/>}
               <h3 className="text-lg font-semibold mt-2">{position}</h3>
               {description && <h4>{description}</h4>}
           </div>
-          </Tooltip>
       }
         {
         year && 
@@ -38,21 +28,12 @@ const TimelineItem = ({
         </div>
         }
       {align === 'right' && 
-          <Tooltip 
-          showArrow
-          placement="right"
-          content={content}
-          classNames={{
-            base: "py-2 px-4 shadow-xl text-black bg-gradient-to-br from-white to-neutral-400",
-            arrow: "bg-neutral-400 dark:bg-white",
-          }}>
           <div className={`w-11/12 text-left`} style={{ marginRight: '+20px' }}>
               <h1>{year}</h1>
               {imageSrc && <Image src={imageSrc} alt={altText} width={260} height={200} />}
               <h3 className="text-lg font-semibold mt-2">{position}</h3>
               {description && <h4>{description}</h4>}
           </div>
-          </Tooltip>
       }
   </div>
 );

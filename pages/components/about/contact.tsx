@@ -1,5 +1,4 @@
 import React, { FC, ChangeEvent, FormEvent } from 'react';
-import { Button, Input, Textarea } from '@nextui-org/react';
 import { HiOutlineMail } from "react-icons/hi"; 
 import { RxAvatar } from "react-icons/rx"; 
 
@@ -43,41 +42,11 @@ const Contact: FC = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="relative">
                     <RxAvatar size={32} className="absolute left-3 top-1/2 transform -translate-y-1/2" />
-                    <Input
-                        className="pl-12 border rounded-md w-full py-2"
-                        placeholder="Your Name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
                 </div>
                 <div className="relative">
                     <HiOutlineMail size={32} className="absolute left-3 top-1/2 transform -translate-y-1/2" />
-                    <Input
-                        className="pl-12 border rounded-md w-full py-2"
-                        placeholder="Your Email"
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
+
                 </div>
-                <Textarea
-                    className="w-full border rounded-md py-2 px-3"
-                    placeholder="Your message ..."
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                />
-                <Button 
-                    className="bg-blue-600 hover:bg-blue-700 text-white w-full py-2 rounded-md transition duration-300"
-                    type="submit"
-                >
-                    Send Message
-                </Button>
             </form>
         </div>
     );

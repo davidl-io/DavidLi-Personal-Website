@@ -1,35 +1,23 @@
-import { nextui } from "@nextui-org/react";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite-react/**/*.js",
+    "./pages/**/*.{ts,tsx}",
+    "./public/**/*.html",
 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+    './styles/globals.css', 
   ],
   theme: {
     extend: {
-      backgroundColor: {
-        'custom-blue': '#CEE4F2',
-      },
       fontFamily: {
         'futura-bold': ['Futura-Bold'],
         'futura-heavy': ['Futura-Heavy'],
         'futura-medium': ['Futura-Medium'],
         'souvenir': ['Souvenir']
       },
-      fontSize: {
-        sm: '0.8rem',
-        base: '1rem',
-        xl: '1.25rem',
-        '2xl': '1.563rem',
-        '3xl': '1.953rem',
-        '4xl': '2.441rem',
-        '20xl': '5.390rem',
+      colors: {
+        'default-bg': '#CEE4F2', 
       }
     },
     colors: {
@@ -40,7 +28,8 @@ module.exports = {
       'color-5': '#4A5859',
     },
   },
-  darkMode: "class",
-  plugins: [nextui()]
+  plugins: [
+    require("flowbite/plugin")
+  ]
 }
 
